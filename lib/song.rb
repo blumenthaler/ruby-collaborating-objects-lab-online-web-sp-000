@@ -11,8 +11,8 @@ class Song
   def artist_name=(name)
     if (self.artist.nil?)
       self.artist = Artist.new(name)
-    elsif
-      self.artist.name = name
+    else
+      self.artist.find {|artist|  artist.name == name}
     end
   end
   
