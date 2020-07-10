@@ -11,7 +11,10 @@ class MP3Importer
 
   def files
     files = []
-    Dir.new[self.path]
+      Dir.new(self.path).each do |file|
+        files << file if file.length > 4
+      end
+    files
     # loads all the mp3 files in the path directory
     # normalizes the file name to just the mp3 filename with no path
   end
