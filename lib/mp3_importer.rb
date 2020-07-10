@@ -10,6 +10,7 @@ class MP3Importer
   end
 
   def files
+    files = []
     Dir.new[self.path]
     # loads all the mp3 files in the path directory
     # normalizes the file name to just the mp3 filename with no path
