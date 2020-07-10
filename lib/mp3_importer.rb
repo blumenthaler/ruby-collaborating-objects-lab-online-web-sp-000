@@ -10,7 +10,7 @@ class MP3Importer
   end
 
   def files
-    Dir["/path/to/search/*"]
+    Dir[self.path]
     # loads all the mp3 files in the path directory
     # normalizes the file name to just the mp3 filename with no path
   end
